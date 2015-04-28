@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1.4">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkinsci.plugins.uniqueid.impl.JobIdStore_-JobIdProperty plugin="unique-id@1.2">
+      <id>
+        <id>NDZiZWQyMTYtZjRiZC00MjJkLTk1ZT</id>
+      </id>
+    </org.jenkinsci.plugins.uniqueid.impl.JobIdStore_-JobIdProperty>
+    <com.cloudbees.opscenter.analytics.reporter.items.AnalyticsJobProperty plugin="operations-center-analytics-reporter@1.6.1">
+      <created>1429548932762</created>
+    </com.cloudbees.opscenter.analytics.reporter.items.AnalyticsJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@1.4">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@2.3.5">
+      <configVersion>2</configVersion>
+      <userRemoteConfigs>
+        <hudson.plugins.git.UserRemoteConfig>
+          <url>https://github.com/jenkinsbyexample/workflow-plugin-pipeline-demo.git</url>
+        </hudson.plugins.git.UserRemoteConfig>
+      </userRemoteConfigs>
+      <branches>
+        <hudson.plugins.git.BranchSpec>
+          <name>*/master</name>
+        </hudson.plugins.git.BranchSpec>
+      </branches>
+      <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+      <submoduleCfg class="list"/>
+      <extensions/>
+    </scm>
+    <scriptPath>flow-no-pause.groovy</scriptPath>
+  </definition>
+  <triggers/>
+</flow-definition>
